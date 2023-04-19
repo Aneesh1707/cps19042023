@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet " href="loginpage.css">
+<style type="text/css">
+
+
+
+</style>
+<meta charset="ISO-8859-1">
+<title >Admin</title>
+</head>
+
+
+<body>
+
+<script type="text/javascript">
+
+function printvalue() {
+    var regName = /^[a-zA-Z]+ [a-zA-Z]+$/;
+
+
+    var Email = document.form1.Email.value;
+    var Password = document.form1.Password.value;
+
+
+    if (Emai==null || Emai==""){
+          alert("Email can't be blank");
+          return false;
+        }
+
+    if (Password==null || Password==""){
+          alert("Password can't be blank");
+          return false;
+        }
+
+    if(!regName.test(Email))
+        {
+        alert("Email must contains alphabets only");
+          return false;
+        }
+
+   
+}
+</script>
+
+<div class="login-page">
+  <div class="form">
+   
+      
+    <form action="Login" name="form1" class="login-form" method="post">
+      Email<input type="email" name="email" placeholder="Enter Email"required="required"/>
+      Password<input type="password" name="password" placeholder="Enter Password"required="required"/>
+      <button type="submit" onclick="printvalue()">login</button>
+      
+     
+    </form>
+  </div>
+</div>
+</body>
+</html>
